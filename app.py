@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import os
 import os
 
-if __name__ == '__main__':
+if __name__ == '__app__':
     port = int(os.environ.get('PORT', 5000))  # گرفتن پورت از محیط
     app.run(host='0.0.0.0', port=port)
     
