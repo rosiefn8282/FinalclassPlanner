@@ -1,1 +1,47 @@
-<!-- HTML طراحی شده با Bootstrap -->
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>برنامه‌ریز هوشمند کلاس‌ها</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding-top: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      margin-top: 30px;
+      background-color: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="file"] {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #2e86de;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1b4f72;
+    }
+  </style>
+</head>
+<body>
+  <h1>برنامه‌ریز هوشمند کلاس‌ها</h1>
+  <form action="/schedule" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".xlsx" required><br>
+    <button type="submit">تولید برنامه</button>
+  </form>
+</body>
+</html>

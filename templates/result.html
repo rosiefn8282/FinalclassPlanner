@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>برنامه نهایی کلاس‌ها</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      text-align: center;
+    }
+    h2 {
+      color: #2e4053;
+    }
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+    }
+    th {
+      background-color: #2980b9;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #27ae60;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    a:hover {
+      background-color: #1e8449;
+    }
+  </style>
+</head>
+<body>
+  <h2>برنامه پیشنهادی شما</h2>
+  <table>
+    <tr>
+      <th>درس</th>
+      <th>استاد</th>
+      <th>روز</th>
+      <th>ساعت شروع</th>
+      <th>ساعت پایان</th>
+      <th>کلاس</th>
+    </tr>
+    {% for cls in schedule %}
+    <tr>
+      <td>{{ cls["درس"] }}</td>
+      <td>{{ cls["استاد"] }}</td>
+      <td>{{ cls["روز"] }}</td>
+      <td>{{ cls["شروع"] }}</td>
+      <td>{{ cls["پایان"] }}</td>
+      <td>{{ cls["کلاس"] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br>
+  <a href="/download">⬇ دانلود فایل Excel</a>
+</body>
+</html>
