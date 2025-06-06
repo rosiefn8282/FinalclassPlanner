@@ -1,5 +1,6 @@
 import pandas as pd
 import random
+import datetime
 
 # زمان‌ها از ساعت 7:30 تا 18 با بازه‌های متنوع
 TIME_SLOTS = [
