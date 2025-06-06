@@ -1,1 +1,23 @@
+body {
+    font-family: 'Vazir', sans-serif;
+    background-color: #f9f9f9;
+    margin: 40px;
+    direction: rtl;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background-color: #eeeeee;
+}
 /* CSS اختصاصی برای طراحی زیبا */
