@@ -1,11 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
-import os
-
-if __name__ == '__app__':
-    port = int(os.environ.get('PORT', 5000))  # گرفتن پورت از محیط
-    app.run(host='0.0.0.0', port=port)
-    
 from werkzeug.utils import secure_filename
 from schedule_engine import run_genetic_algorithm  # الگوریتم زمان‌بندی
 
@@ -31,10 +25,12 @@ def index():
             best_schedule, score = run_genetic_algorithm()
             return render_template('index.html', schedule=best_schedule, score=score)
     return render_template('index.html')
+    import os
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+
 from output_creator import save_schedule_excel, save_schedule_pdf
 
 # بعد از ساخت زمان‌بندی
