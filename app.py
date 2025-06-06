@@ -23,13 +23,6 @@ def index():
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(filepath)
 
-            # اجرای الگوریتم زمان‌بندی
-            best_schedule, score = run_genetic_algorithm()
-            
-            # ذخیره خروجی
-            save_schedule_excel(best_schedule)
-            save_schedule_pdf(best_schedule)
-
             return render_template('result.html', schedule=best_schedule, score=score)
     return render_template('index.html')
 
